@@ -1,0 +1,51 @@
+group 'net.sietseringers'
+version '0.1'
+
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+sourceCompatibility = 1.7
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.1.1'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'net.java.dev.jna:jna:4.1.0'
+    compile 'it.unisa.dia.gas:jpbc-api:2.0.0'
+    compile 'it.unisa.dia.gas:jpbc-plaf:2.0.0'
+    compile 'it.unisa.dia.gas:jpbc-pbc:2.0.0'
+}
+
+android {
+    compileSdkVersion 14
+    buildToolsVersion "19.1"
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    lintOptions {
+        // Ignore external package references
+        disable 'InvalidPackage'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}

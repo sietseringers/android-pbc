@@ -1,0 +1,8 @@
+gen/
+bin/
+build/
+.gradle/
+.settings/
+lint.xml
+*.iml
+obj/
