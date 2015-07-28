@@ -1,0 +1,6 @@
+[submodule "jni/gmp"]
+	path = jni/gmp
+	url = https://github.com/Rupan/gmp
+[submodule "jni/jpbc-pbc"]
+	path = jni/jpbc-pbc
+	url = http://repo.or.cz/r/pbc.git
