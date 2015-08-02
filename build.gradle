@@ -24,6 +24,7 @@ repositories {
 
 dependencies {
     compile 'net.java.dev.jna:jna:3.1.0'
+    compile 'net.java.dev.jna:jna:4.1.0'
     compile 'it.unisa.dia.gas:jpbc-api:2.0.0'
     compile 'it.unisa.dia.gas:jpbc-plaf:2.0.0'
     compile 'it.unisa.dia.gas:jpbc-pbc:2.0.0'
