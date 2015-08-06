@@ -41,6 +41,6 @@ I cannot guarantee that this software will work. I have run just a few tests on 
 
 The upper two libraries have been included as submodules in the `jni/` folder. Assuming you have the Android NDK installed, they can be compiled as follows:
     
-    ./gradlew nkdBuild
+    ./gradlew ndkBuild
 
 This will place them in the `libs/` folder, after which they will be included in the final .aar file. For some reason this process also deletes the `libjnidispatch.so` files from the `libs/` folder,  you'll have to checkout those again.
